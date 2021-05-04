@@ -1,0 +1,74 @@
+.adress-box {
+  width: 100%;
+  display: flex;
+  height: 44px;
+  margin-bottom: 4px;
+}
+.main-form__adress {
+  height: 44px;
+  background-color: $dark-gray;
+  border: 0;
+  position: relative;
+  width: 52%;
+}
+.main-form__adress::placeholder {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  color: $gray;
+}
+.adress-wrapper {
+  width: 11%;
+  background-color: $dark-gray;
+  position: relative;
+}
+.adress-icon {
+  width: 16px;
+  height: 16px;
+  border: 4px solid $spec-red;
+  background-color: $dark-gray;
+  border-radius: 50%;
+  position: absolute;
+  top: 33%;
+  left: 12px;
+}
+.adress-icon__color {
+  border: 4px solid $basic-white;
+}
+.adress-wrapper__widget {
+  display: flex;
+  justify-content: flex-end;
+  background-color: $dark-gray;
+  width: 37%;
+}
+.adress-widget {
+  background: $other-gray;
+  border-radius: 2px;
+  width: 119px;
+  height: 24px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: $basic-white;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding-top: 4px;
+}
+.adress-widget__color {
+  opacity: 0.3;
+}
+@media (min-width: $desktop-width) {
+  .adress-wrapper {
+    width: 5%;
+  }
+  .main-form__adress {
+    width: 74%;
+  }
+  .adress-wrapper__widget {
+    width: 20%;
+  }
+}

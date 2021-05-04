@@ -1,0 +1,21 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "Ruslan",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^4.1.0"
+  }
+}

@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page-body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: $fon-color;
+  color: $basic-white;
+  display: grid;
+  padding-left: 16px;
+  padding-right: 16px;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

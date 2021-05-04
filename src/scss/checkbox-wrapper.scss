@@ -1,0 +1,40 @@
+.checkbox-wrapper {
+  margin-top: 16px;
+  position: relative;
+}
+.main-form__checkbox {
+  position: relative;
+  margin-right: 18px;
+  display: none;
+}
+.main-form__checkbox-off {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+}
+.main-form__checkbox-on {
+  position: absolute;
+  left: 7px;
+  top: 8px;
+}
+.main-form__label--moving {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 4px;
+  margin-left: 36px;
+}
+.main-form__checkbox-on {
+  display: none;
+}
+.main-form__checkbox:checked + .main-form__checkbox-off {
+  fill: $spec-red;
+}
+
+.main-form__checkbox:checked + .main-form__checkbox-off>path {
+  stroke: $spec-red;
+}
+.main-form__checkbox:checked ~ .main-form__checkbox-on {
+  display: block;
+}

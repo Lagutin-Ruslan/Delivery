@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Грузоперевозки</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-body">
+  <header>
+    <h1 class="page-header__title">FTL: Прямая машина</h1>
+  </header>
+
+  <main>
+    <form action="" method="get" class="main-form">
+      <fieldset class="main-form__frame">
+        <div class="main-form__box">
+          <span class="main-form__icon">1</span>
+          <h2 class="main-form__subtitle">Маршрут</h2>
+        </div>
+        <label for="where-from" class="main-form__label">Откуда</label>
+        <select class="main-form__field" name="text" id="where-from">
+          <option selected disabled hidden class="color-default">Выберите склад</option>
+          <option value="">Вариант 1</option>
+          <option value="">Вариант 2</option>
+          <option value="">Вариант 3</option>
+        </select>
+        <label for="where" class="main-form__label">Куда</label>
+        <select class="main-form__field" name="text" id="where">
+          <option selected disabled hidden class="color-default">Выберите склад</option>
+          <option value="">Вариант 1</option>
+          <option value="">Вариант 2</option>
+          <option value="">Вариант 3</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="main-form__frame main-form__frame--moving">
+        <div class="main-form__box">
+          <span class="main-form__icon">2</span>
+          <h2 class="main-form__subtitle">Транспорт</h2>
+        </div>
+        <div class="main-form__wrapper">
+          <div class="main-form__wrapper--moving">
+            <label for="tonnage" class="main-form__label">Грузоподъёмность</label>
+            <select class="main-form__field main-form__field--moving" name="text" id="tonnage">
+              <option selected disabled hidden>Не выбрана</option>
+              <option value="">Вариант 1</option>
+              <option value="">Вариант 2</option>
+              <option value="">Вариант 3</option>
+              <option value="">Вариант 4</option>
+              <option value="">Вариант 5</option>
+            </select>
+          </div>
+          <div class="main-form__wrapper--moving">
+            <label for="loading" class="main-form__label">Способ погрузки</label>
+            <select class="main-form__field main-form__field--moving" name="text" id="loading">
+              <option value="" selected>Задняя</option>
+              <option value="">Вариант 2</option>
+              <option value="">Вариант 3</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="main-form__frame main-form__frame--moving">
+        <div class="main-form__box">
+          <span class="main-form__icon">3</span>
+          <h2 class="main-form__subtitle">Груз</h2>
+        </div>
+        <div class="main-form__wrapper">
+          <div class="main-form__wrapper-single main-form__wrapper--moving">
+            <label for="cargo-type" class="main-form__label">Тип груза</label>
+            <select class="main-form__field" name="text" id="cargo-type">
+              <option selected disabled hidden class="color-default">Не выбрана</option>
+              <option value="">Вариант 1</option>
+              <option value="">Вариант 2</option>
+              <option value="">Вариант 3</option>
+            </select>
+          </div>
+          <div class="main-form__wrapper--moving main-form__wrapper--transform">
+            <label for="danger-class" class="main-form__label">Класс опасности</label>
+            <select class="main-form__field" name="text" id="danger-class">
+              <option value="">Класс 5 — Окисляющие вещества и органические перекиси</option>
+              <option value="">Вариант 2</option>
+              <option value="">Вариант 3</option>
+            </select>
+          </div>
+          <div class="main-form__wrapper--moving">
+            <label for="declared-value" class="main-form__label">Объявленная ценность, &#8381</label>
+            <select class="main-form__field" name="text" id="declared-value">
+              <option selected disabled hidden class="color-default">&ge; 1</option>
+              <option value="">Вариант 1</option>
+              <option value="">Вариант 2</option>
+              <option value="">Вариант 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="checkbox-wrapper">
+          <!-- работу checkbox(с появлением полей) реализовал через CSS -->
+          <input type="checkbox" class="main-form__checkbox" id="checkbox">
+          <svg class="main-form__checkbox-off" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path width="24" height="24" d="M1 1v22h22V1H1z" stroke="#fff" stroke-width="2" />
+          </svg>
+          <svg class="main-form__checkbox-on" width="11" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5l5.5-5L11 1.5 4 8 0 4l1.5-1.5L4 5z" fill="#fff" />
+          </svg>
+          <label class="main-form__label main-form__label--moving" for="checkbox">Требуется температурный режим</label>
+          <div class="main-form__wrapper main-form__wrapper--hidden">
+            <div class="main-form__wrapper--moving">
+              <label for="temperature-from" class="main-form__label">От, &#176С</label>
+              <select class="main-form__field" name="text" id="temperature-from">
+                <option value="" selected>-20</option>
+                <option value="">Вариант 2</option>
+                <option value="">Вариант 3</option>
+              </select>
+            </div>
+            <div class="main-form__wrapper--moving">
+              <label for="temperature-up" class="main-form__label">До, &#176С</label>
+              <select class="main-form__field" name="text" id="temperature-up">
+                <option value="" selected>+23</option>
+                <option value="">Вариант 2</option>
+                <option value="">Вариант 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="main-form__frame main-form__frame--moving">
+        <div class="main-form__box">
+          <span class="main-form__icon">4</span>
+          <h2 class="main-form__subtitle">Время</h2>
+        </div>
+        <div class="main-form__label--moving-right">
+          <label class="main-form__label">Когда прибыть на точку</label>
+          <label class="main-form__label main-form__label-color">700 км в день</label>
+        </div>
+        <div class="adress-box">
+          <div class="adress-wrapper">
+            <div class="adress-icon"></div>
+          </div>
+          <input class="main-form__adress main-form__adress-color" type="text" placeholder="Адрес не указан">
+          <div class="adress-wrapper__widget">
+            <div class="adress-widget">Не выбрано</div>
+          </div>
+        </div>
+        <div class="adress-box">
+          <div class="adress-wrapper">
+            <div class="adress-icon adress-icon__color"></div>
+          </div>
+          <input class="main-form__adress" type="text" placeholder="Адрес не указан" disabled>
+          <div class="adress-wrapper__widget">
+            <div class="adress-widget adress-widget__color">Не выбрано</div>
+          </div>
+        </div>
+
+        <label for="comment" class="main-form__label">Комментарий</label>
+        <textarea class="main-form__comment" name="comment" id="comment" cols="40" rows="3"
+          placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="footer-content__text">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и
+        прибытия.</p>
+    </div>
+  </footer>
+
+  <!--подготовил шаблон выпадающего списка (взамен дефолтного select)
+    для обработки JS разработчиком (на popup display: none)-->
+  <section class="popup">
+    <label class="popup-label" for="popup-name">Грузоподъёмность</label>
+    <div class="popup-box" id="popup-name">
+      <div class="popup-field">Не выбрана</div>
+      <div type="button" class="popup-field__btn">
+        <button class="btn-down btn">
+          <svg class="button-dropdown-down" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 10l3 3 3-3 1 1-4 4-4-4 1-1z" fill="#000" />
+          </svg>
+        </button>
+        <button class="btn-up btn">
+          <svg class="button-dropdown__up" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M16 16H0V0h16z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 10L8 7l-3 3-1-1 4-4 4 4-1 1z" fill="#000" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <ul class="popup-list">
+      <li class="popup-item">Вариант 1</li>
+      <li class="popup-item">Вариант 2</li>
+      <li class="popup-item">Вариант 3</li>
+      <li class="popup-item">Вариант 4</li>
+      <li class="popup-item">Вариант 5</li>
+    </ul>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
